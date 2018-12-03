@@ -7,81 +7,22 @@
           p.page-content__subtitle.text-center &Pcy;&ocy;&scy;&mcy;&ocy;&tcy;&rcy;&icy;&tcy;&iecy; &ncy;&ocy;&vcy;&ucy;&yucy; &kcy;&ocy;&lcy;&lcy;&iecy;&kcy;&tscy;&icy;&yucy; &icy;&zcy; &ucy;&ncy;&icy;&kcy;&acy;&lcy;&softcy;&ncy;&ocy;&jcy; &mcy;&iecy;&bcy;&iecy;&lcy;&icy; &icy; &pcy;&rcy;&iecy;&dcy;&mcy;&iecy;&tcy;&ocy;&vcy; &vcy; Artplay
   .container
     #carouselList.sales-block__owl-carousel.owl-carousel.owl-theme.owl-loaded
-      .owl-stage-outer
-        .owl-stage
-          .owl-item
-            .sales-block__img-wrap
-              a(href='#')
-                img(src='./img/sales/1.jpg', alt='')
-            .sales-block__text-block
-              a(href='#').sales-block__title &Kcy;&ocy;&mcy;&ocy;&dcy; &quot;&Vcy;&ocy;&scy;&tcy;&ocy;&chcy;&ncy;&ocy;&iecy; &ocy;&chcy;&acy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;&quot;
-              p.sales-block__description &mcy;&acy;&scy;&scy;&icy;&vcy; &pcy;&acy;&lcy;&icy;&scy;&acy;&ncy;&dcy;&rcy;&acy;, &lcy;&acy;&tcy;&ucy;&ncy;&softcy;
-              .sales-block__price-wrap
-                span.sales-block__old-price
-                  strike 59700 &#x20BD;
-                span.sales-block__price 59700 &#x20BD;
-            .sales-block__button
-              a(href="#") В корзину
-      .owl-stage-outer
-        .owl-stage
-          .owl-item
-            .sales-block__img-wrap
-              a(href='')
-                img(src='./img/sales/2.jpg', alt='')
-            .sales-block__text-block
-              a(href='#').sales-block__title &Kcy;&ocy;&mcy;&ocy;&dcy; &quot;&Vcy;&ocy;&scy;&tcy;&ocy;&chcy;&ncy;&ocy;&iecy; &ocy;&chcy;&acy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;&quot;
-              p.sales-block__description &mcy;&acy;&scy;&scy;&icy;&vcy; &pcy;&acy;&lcy;&icy;&scy;&acy;&ncy;&dcy;&rcy;&acy;, &lcy;&acy;&tcy;&ucy;&ncy;&softcy;
-              .sales-block__price-wrap
-                span.sales-block__old-price
-                  strike 59700 &#x20BD;
-                span.sales-block__price 59700 &#x20BD;
-            .sales-block__button
-              a(href="#") В корзину
-      .owl-stage-outer
-        .owl-stage
-          .owl-item
-            .sales-block__img-wrap
-              a(href='')
-                img(src='./img/sales/3.jpg', alt='')
-            .sales-block__text-block
-              a(href='#').sales-block__title &Kcy;&ocy;&mcy;&ocy;&dcy; &quot;&Vcy;&ocy;&scy;&tcy;&ocy;&chcy;&ncy;&ocy;&iecy; &ocy;&chcy;&acy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;&quot;
-              p.sales-block__description &mcy;&acy;&scy;&scy;&icy;&vcy; &pcy;&acy;&lcy;&icy;&scy;&acy;&ncy;&dcy;&rcy;&acy;, &lcy;&acy;&tcy;&ucy;&ncy;&softcy;
-              .sales-block__price-wrap
-                span.sales-block__old-price
-                  strike 59700 &#x20BD;
-                span.sales-block__price 59700 &#x20BD;
-            .sales-block__button
-              a(href="#") В корзину
-      .owl-stage-outer
-        .owl-stage
-          .owl-item
-            .sales-block__img-wrap
-              a(href='')
-                img(src='./img/sales/1.jpg', alt='')
-            .sales-block__text-block
-              a(href='#').sales-block__title &Kcy;&ocy;&mcy;&ocy;&dcy; &quot;&Vcy;&ocy;&scy;&tcy;&ocy;&chcy;&ncy;&ocy;&iecy; &ocy;&chcy;&acy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;&quot;
-              p.sales-block__description &mcy;&acy;&scy;&scy;&icy;&vcy; &pcy;&acy;&lcy;&icy;&scy;&acy;&ncy;&dcy;&rcy;&acy;, &lcy;&acy;&tcy;&ucy;&ncy;&softcy;
-              .sales-block__price-wrap
-                span.sales-block__old-price
-                  strike 59700 &#x20BD;
-                span.sales-block__price 59700 &#x20BD;
-            .sales-block__button
-              a(href="#") В корзину
-      .owl-stage-outer
-        .owl-stage
-          .owl-item
-            .sales-block__img-wrap
-              a(href='')
-                img(src='./img/sales/2.jpg', alt='')
-            .sales-block__text-block
-              a(href='#').sales-block__title &Kcy;&ocy;&mcy;&ocy;&dcy; &quot;&Vcy;&ocy;&scy;&tcy;&ocy;&chcy;&ncy;&ocy;&iecy; &ocy;&chcy;&acy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;&quot;
-              p.sales-block__description &mcy;&acy;&scy;&scy;&icy;&vcy; &pcy;&acy;&lcy;&icy;&scy;&acy;&ncy;&dcy;&rcy;&acy;, &lcy;&acy;&tcy;&ucy;&ncy;&softcy;
-              .sales-block__price-wrap
-                span.sales-block__old-price
-                  strike 59700 &#x20BD;
-                span.sales-block__price 59700 &#x20BD;
-            .sales-block__button
-              a(href="#") В корзину
+      - for (var i = 0; i < 6; i++)
+        .owl-stage-outer
+          .owl-stage
+            .owl-item
+              .sales-block__img-wrap
+                a(href='#')
+                  img(src='./img/sales/1.jpg', alt='')
+              .sales-block__text-block
+                a(href='#').sales-block__text-block-title &Kcy;&ocy;&mcy;&ocy;&dcy; &quot;&Vcy;&ocy;&scy;&tcy;&ocy;&chcy;&ncy;&ocy;&iecy; &ocy;&chcy;&acy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&iecy;&quot;
+                p.sales-block__text-block-description &mcy;&acy;&scy;&scy;&icy;&vcy; &pcy;&acy;&lcy;&icy;&scy;&acy;&ncy;&dcy;&rcy;&acy;, &lcy;&acy;&tcy;&ucy;&ncy;&softcy;
+                .sales-block__text-block-prices
+                  span.sales-block__text-block-prices-old-price
+                    strike 59700 &#x20BD;
+                  span.sales-block__text-block-prices-price 59700 &#x20BD;
+              .sales-block__button
+                a(href="#").standart-button В корзину
   .container
     .page__button
       a.page__button-link(href='#') &Vcy;&scy;&iecy; &tcy;&ocy;&vcy;&acy;&rcy;&ycy; &vcy; &rcy;&acy;&scy;&pcy;&rcy;&ocy;&dcy;&acy;&zhcy;&iecy;

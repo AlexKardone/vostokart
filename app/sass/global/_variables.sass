@@ -13,6 +13,8 @@ $greyLight: #e6e6e6
 $greyLighten: #cccccc
 $grey: #999999
 $greyLight2: #d5d5d8
+$greyLight3: #e7e7e7
+$greyLight4: #f2ebe5
 $greyDark: #666666
 $greyDarken: #333333
 $red: #ff3333
@@ -65,3 +67,23 @@ $fontMedium: 'Montserat Medium'
 @mixin a-hover
 		text-decoration: none
 		color: $orange * 1.2
+
+// description and price for goods
+@mixin goods-descr-and-price
+	&-title
+		margin-bottom: $dfz
+		display: block
+		text-transform: uppercase
+	&-description
+		margin-bottom: $dfz * 1.5
+		display: block
+	&-prices
+		vertical-align: middle
+		&-old-price
+			margin-right: 1em
+			display: inline-block
+			font-size: $dfz * 0.8
+			color: $greyDark
+		&-price
+			display: inline-block
+			font-size: $dfz * 1.3

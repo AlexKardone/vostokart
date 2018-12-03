@@ -1,24 +1,31 @@
 .cart-popup
 	.cart-popup__window
-		.cart-popup__window-close-btn
-		.cart-popup__window-title
-			span Добавлено в корзину
+		.cart-popup__window-top
+			button.cart-popup__window-top-close-btn Закрыть
+			.cart-popup__window-top-title
+				span Добавлено в корзину
 		.cart-popup__window-goods
 			ul.cart-popup__window-goods-list
-				li.cart-popup__window-goods-list-item
-					.cart-popup__window-goods-list-item-left
-						.cart-popup__window-goods-list-item-left-img
-							img(src='', alt='')
-					.cart-popup__window-goods-list-item-center
-						.cart-popup__window-goods-list-item-center-title
-							a(href='#') Комод "Восточное Очарование"
-						.cart-popup__window-goods-list-item-center-descr
-							span массив палисандра, латунь
-					.cart-popup__window-goods-list-item-right
-						.cart-popup__window-goods-list-item-right-old-price
-							span
-								strike 59700 &#x20BD;
-						.cart-popup__window-goods-list-item-right-new-price
-							span 59700 &#x20BD;
-		.cart-popup__window-descr
+				- for (var i = 0; i < 2; i++)
+					li.cart-popup__window-goods-list-item
+						.cart-popup__window-goods-list-item-side.cart-popup__window-goods-list-item-left
+							.cart-popup__window-goods-list-item-left-img
+								img(src='../img/collections/popup-1.jpg', alt='')
+						.cart-popup__window-goods-list-item-side.cart-popup__window-goods-list-item-center
+							.cart-popup__window-goods-list-item-center-title
+								a(href='#') Комод "Восточное Очарование"
+							.cart-popup__window-goods-list-item-center-description
+								span массив палисандра, латунь
+							.cart-popup__window-goods-list-item-center-prices
+								.cart-popup__window-goods-list-item-center-prices-old-price
+									span
+										strike 59700 &#x20BD
+								.cart-popup__window-goods-list-item-center-prices-price
+									span 59700 &#x20BD
+						.cart-popup__window-goods-list-item-side.cart-popup__window-goods-list-item-right
+							button.standart-button Удалить
+		.cart-popup__window-description
+			| Для уточнения наличия товара и его количества, пожалуйста, оформите заказ. Наш менеджер свяжется с вами.
 		.cart-popup__window-buttons
+			button.standart-button.cart-popup__window-buttons-left Продолжить покупки
+			a(href='#').standart-button.cart-popup__window-buttons-right Оформить заказ

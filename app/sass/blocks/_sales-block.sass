@@ -29,40 +29,21 @@
 			border-radius: 50%
 	&__text-block
 		margin-bottom: $blockindent * 0.5
-	&__title
-		margin-bottom: $dfz
-		display: block
-		text-transform: uppercase
-	&__description
-		margin-bottom: $dfz * 1.5
-		display: block
-	&__price-wrap
-		vertical-align: middle
-	&__old-price
-		margin-right: 1em
-		font-size: $dfz * 0.8
-		color: $greyDark
-	&__price
-		font-size: $dfz * 1.3
+		@include goods-descr-and-price
 	&__button
-		a
-			position: relative
-			padding: $dfz 2em $dfz 3em
-			display: block
-			font-family: $dfontMadiun
-			border: 1px solid $pink
-			border-radius: 2px
-			cursor: pointer
+		margin: 2px 4px
+		a 
+			text-align: left
 			&::after
 				content: ''
 				position: absolute
-				top: 0
-				right: 0
+				top: -1px
+				bottom: -1px
+				left: 100%
 				display: inline-block
 				width: 30%
-				height: 100%
 				background: url('../img/icons/cart2.png') center no-repeat
-				border-left: 1px solid $pink
+				border: 1px solid $pink
 
 	.owl-carousel .owl-nav .owl-next,
 	.owl-carousel .owl-nav .owl-prev

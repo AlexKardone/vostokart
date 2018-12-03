@@ -7,7 +7,7 @@ $(document).ready(function() {
   );
 
   // animation of the search button
-  $('.page-header__search-submit').hover(
+  $('.page-header__search-submit, .cart-popup__window-top-close-btn, .standart-button').hover(
     function() { $(this).addClass('animated pulse')},
     function() { $(this).removeClass('animated pulse')}
   );

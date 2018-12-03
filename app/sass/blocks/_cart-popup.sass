@@ -1,15 +1,85 @@
 .cart-popup
-	z-index: 99999
-	position: fixed
+	// display: none
+	z-index: 1000
+	position: absolute
 	top: 0
-	right: 0
-	bottom: 0
-	left: 0
-	background-color: $red
+	width: 100%
+	min-height: 100%
+	background-color: rgba(255,255,255,0.7)
 	&__window
 		position: absolute
-		top: 20%
+		top: 20px
 		right: 20%
-		bottom: 20%
 		left: 20%
-		background-color: $white
+		background-color: $pinkLight
+		border: 1px solid $greyLight4
+		box-shadow: 0px 19px 35px 0px rgba(102,102,102,0.7)
+		&-top
+			position: relative
+			padding: $dfz * 2 4em
+			border-bottom: 1px solid $greyLight3
+			&-close-btn
+				position: absolute
+				top: $dfz * 2
+				right: $dfz * 2
+				padding: 0
+				width: 30px
+				height: 30px
+				font-size: 0
+				border: none
+				background: none
+				&::before,
+				&::after
+					content: ''
+					position: absolute
+					top: 0
+					left: 50%
+					width: 2px
+					height: 30px
+					background-color: $orange
+					transform: rotate(45deg)
+				&::after
+					transform: rotate(-45deg)
+			&-title
+				display: block
+				width: 100%
+				text-align: center
+				text-transform: uppercase
+				font-size: $dfz * 1.5
+				color: $black
+		&-goods
+			padding: 0 4em $dfz*2 4em
+			&-list
+				list-style: none
+				&-item
+					display: flex
+					justify-content: space-between
+					padding: $dfz*2 0
+					border-bottom: 1px solid $greyLight3
+					&-side
+						margin-right: 1em
+						display: inline-block
+						vertical-align: top
+					&-left
+					&-center
+						flex: 1
+						@include goods-descr-and-price
+					&-right
+						margin-right: 0
+		&-description
+			padding: 0 4em $dfz*2 4em
+			font-size: $dfz * 1.1
+			color: $greyDarken
+			border-bottom: 1px solid $greyLight3
+		&-buttons
+			padding: $dfz*2 4em
+			&-left
+				margin-right: 1em
+			&-right
+				background-color: $redLight
+				color: $white
+				&:hover
+					color: $white
+
+
+

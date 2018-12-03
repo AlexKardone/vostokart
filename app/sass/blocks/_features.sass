@@ -8,10 +8,20 @@
 		font-size: 0
 		li
 			margin-right: 1.5%
-			margin-bottom: $vert-margin
+			margin-bottom: $vert-margin * 1.5
 			display: inline-block
 			vertical-align: top
 			width: 30%
-			font-size: initial
+			font-size: $dfz * 1.5
+			color: $greyLight2
+			font-family: $dfontLight
+			span
+				margin-bottom: $dfz
+				display: inline-block
+			p
+				font-family: $fontItalic
 		li:last-of-type
 			margin-right: 0
+	&__img-wrap
+		margin-bottom: $dfz
+		min-height: 110px

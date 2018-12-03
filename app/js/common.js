@@ -18,6 +18,17 @@ $(document).ready(function() {
     function() { $('.page-footer__top-right-email-icon').removeClass('animated tada')}
   );
 
+  // animation of the button
+  $('.page__button').hover(
+    function() { $('.page__button-link').addClass('animated pulse')},
+    function() { $('.page__button-link').removeClass('animated pulse')}
+  );
+
+  // animation of the carousel arrows
+  // $('.owl-nav, .owl-next').hover(
+  //   function() { $(this).addClass('animated pulse')},
+  //   function() { $(this).removeClass('animated pulse')}
+  // );
 
 
 
@@ -48,7 +59,7 @@ $(document).ready(function() {
   	items: 4,
   	margin: 10,
   	nav: true,
-  	navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+  	// navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
   	dots: false,
   	loop: true
   });

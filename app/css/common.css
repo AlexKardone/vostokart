@@ -274,6 +274,7 @@ a:active {
 .page__button-link {
   position: relative;
   margin: 0 auto;
+  display: inline-block;
   text-transform: initial;
   letter-spacing: 0.05em;
   color: #ff9966;
@@ -282,7 +283,7 @@ a:active {
 
 .page__button-link:hover {
   text-decoration: none;
-  color: #ff9966;
+  color: #ffb87a;
 }
 
 .page__button-link::before {
@@ -666,7 +667,7 @@ a:active {
 .category-list__item:hover,
 .category-list__link:hover {
   text-decoration: none;
-  color: #ff9966;
+  color: #ffb87a;
 }
 
 .category-list__item--title-top {
@@ -754,6 +755,7 @@ a:active {
 
 .sales-block__img-wrap {
   position: relative;
+  margin-bottom: 2.5rem;
 }
 
 .sales-block__img-wrap::before {
@@ -785,8 +787,85 @@ a:active {
   border-radius: 50%;
 }
 
+.sales-block__text-block {
+  margin-bottom: 1.25rem;
+}
+
+.sales-block__title {
+  margin-bottom: 1rem;
+  display: block;
+  text-transform: uppercase;
+}
+
+.sales-block__description {
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.sales-block__price-wrap {
+  vertical-align: middle;
+}
+
 .sales-block__old-price {
-  font-size: 0.66667rem;
+  margin-right: 1em;
+  font-size: 0.8rem;
+  color: #666666;
+}
+
+.sales-block__price {
+  font-size: 1.3rem;
+}
+
+.sales-block__button a {
+  position: relative;
+  padding: 1rem 2em 1rem 3em;
+  display: block;
+  font-family: "Cera Pro Medium";
+  border: 1px solid #ffcccc;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.sales-block__button a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 30%;
+  height: 100%;
+  background: url("../img/icons/cart2.png") center no-repeat;
+  border-left: 1px solid #ffcccc;
+}
+
+.sales-block .owl-carousel .owl-nav .owl-next,
+.sales-block .owl-carousel .owl-nav .owl-prev {
+  font-size: 0;
+}
+
+.sales-block .owl-carousel .owl-nav .owl-next::before,
+.sales-block .owl-carousel .owl-nav .owl-prev::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-left: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+.sales-block .owl-carousel .owl-nav .owl-prev {
+  margin-left: -100px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sales-block .owl-carousel .owl-nav .owl-next {
+  margin-right: -100px;
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
 }
 
 .features-block {
@@ -803,15 +882,31 @@ a:active {
 
 .features-block ul li {
   margin-right: 1.5%;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
   display: inline-block;
   vertical-align: top;
   width: 30%;
-  font-size: initial;
+  font-size: 1.5rem;
+  color: #d5d5d8;
+  font-family: "Cera Pro Light";
+}
+
+.features-block ul li span {
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.features-block ul li p {
+  font-family: "Alexander";
 }
 
 .features-block ul li:last-of-type {
   margin-right: 0;
+}
+
+.features-block__img-wrap {
+  margin-bottom: 1rem;
+  min-height: 110px;
 }
 
 .page-footer__top {

@@ -1,0 +1,90 @@
+.page-footer__top
+	.container
+		.row
+			.col-md-4
+				.page-footer__top-left
+					.page__logo.page__logo--footer
+						img(src='./img/logo.png', alt='Интерьеры Махараджей')
+					.page-footer__top-left-text
+						p
+							| Все права защищены © 2000-2018
+							br
+							| Фотографии, материалы и статьи 
+							| являются собственностью галереи
+							| «Интерьеры Махараджей»
+			.col-md-2.offset-md-1
+				.page-footer__top-list
+					ul
+						- var footerListOne = ['Каталог', 'Доставка', 'О галерее', 'Контакты']
+						each item in footerListOne
+							li
+								a(href="#")= item
+			.col-md-2
+				.page-footer__top-list
+					ul
+						- var footerListOne = ['Мебель', 'Антиквариат', 'Свет', 'Коллекции', 'Интерьер']
+						each item in footerListOne
+							li
+								a(href="#")= item
+			.col-md-3
+				.page-footer__top-right
+					.phone-number.phone-number--footer
+							.phone-number__icon
+								include ../../img/icons/phone.svg
+							span.phone-number__text
+								a(href='tel:+79031035309') 7 903 103-53-09
+					.page-footer__top-right-text
+						span По всем вопросам пишите нам на
+					.page-footer__top-right-email
+						.page-footer__top-right-email-icon
+							include ../../img/icons/letter.svg
+						a(href='mailto:vopros@vostok-art.ru') vopros@vostok-art.ru
+					.page-footer__top-right-soc
+						ul
+							li
+								a(href="#")
+									i.fab.fa-vk
+							li
+								a(href="#")
+									i.fab.fa-facebook-f
+							li
+								a(href="#")
+									i.fab.fa-instagram
+							li
+								a(href="#")
+									i.fab.fa-twitter
+.page-footer__middle
+	.container
+		.row
+			.col-md-4
+				.page-footer__middle-left
+					.page-footer__middle-left-text
+						p
+							| ARTPLAY Москва,
+							br
+							| Нижняя Сыромятническая,
+							br
+							|	д. 10 стр. 2
+							br
+							|	Телефон: +7 (903) 103-53-09
+			.col-md-2.offset-md-1
+				.page-footer__middle-center
+					.page-footer__middle-center-text
+						span 
+							| Подпишитесь 
+							br
+							| на нашу рассылку
+			.col-md-5
+				.page-footer__middle-right
+					form.page-footer__middle-right-search-form
+						input(placeholder='Email').page-footer__middle-right-search-input
+						button(type="submit").page-footer__middle-right-search-submit
+							| Подписаться
+.page-footer__bottom
+	.container
+		.page-footer__bottom-text
+			span Аутсорсинг маркетинга от 
+				a(href="https://rdsales.ru/") R&amp;D
+			span Дизайн сайта: 
+				a(href="mailto:smila-design@yandex.ru") smila-design@yandex.ru
+

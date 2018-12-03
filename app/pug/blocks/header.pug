@@ -1,0 +1,45 @@
+header.page-header
+	.page-header__top
+		.container
+			.row
+				.col-md-3
+					.page-header__left
+						.phone-number
+							.phone-number__icon
+								include ../../img/icons/phone.svg
+							span.phone-number__text
+								a(href='tel:+79031035309') 7 903 103-53-09
+				.col-md-6
+					.page-header__center
+						.page__logo
+							img(src='./img/logo.png', alt='Интерьеры Махараджей')
+				.col-md-3
+					.page-header__right
+						.page-header__search
+							form.page-header__search-form
+								input(placeholder='Поиск по каталогу').page-header__search-input
+								button.page-header__search-submit(type="submit")
+									img(src='./img/icons/search.png', alt='Искать')
+	.page-header__middle
+		.container
+			.row
+				.col-md-10
+					.page-header__middle-menu
+						ul.page-header__middle-menu-list
+							- var middleMenuList = ['Главная', 'Наши коллекция', 'Распродажа', 'О галерее', 'Контакты']
+							each item in middleMenuList
+								li
+									a(href='#')= item
+				.col-md-2
+					.page-header__cart
+						a(href='#', title='Перейти в корзину').page-header__cart-icon
+								img(src='./img/icons/cart.png', alt='Корзина')
+						.page-header__cart-badge 2
+	.page-header__bottom
+		.container
+			ul.page-header__bottom-menu-list
+				- var bottomMenuList = ['Мебель и интерьер', 'Двери и экстерьер', 'Антиквариат и подарки', 'Коллекции', 'Свет']
+					each item in bottomMenuList
+						li
+							a(href='#')= item
+		include ./menu.pug

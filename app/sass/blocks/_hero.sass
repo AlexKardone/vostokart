@@ -1,0 +1,61 @@
+.page-hero
+	margin-bottom: $vert-margin * 0.52
+	&__owl-item
+		width: 100%
+	&__text-block
+		position: absolute
+		top: 19%
+		right: 14.4%
+		display: inline-block
+		max-width: 480px
+		color: $white
+	&__title
+		margin: 0
+		margin-bottom: -15px
+		text-transform: uppercase
+		font-size: $dfz * 4.5
+		letter-spacing: 0.08em
+	&__subtitle
+		margin-bottom: $vert-margin / 3
+		font-size: $dfz * 2.9
+	&__text
+		margin-bottom: $vert-margin / 1.4
+		font-size: $dfz * 2
+		font-family: $fontItalic
+	&__btn
+		padding: 0.6rem 2.7em
+		color: $white
+		background-color: transparent
+		border: 1px solid $white
+		border-radius: 5px
+		&:hover
+			color: $white / 1.5
+			border-color: $white / 1.5
+		&:focus
+			outline: none
+	img
+		object-fit: cover
+		height: 655px
+	.owl-theme .owl-nav [class*=owl-]
+		background: none
+
+	.owl-carousel .owl-nav .owl-next,
+	.owl-carousel .owl-nav .owl-prev
+		font-size: 0
+		&::before
+			content: ''
+			display: block
+			width: 50px
+			height: 50px
+			border-left: 1px solid white
+			border-bottom: 1px solid white
+	.owl-carousel .owl-nav .owl-prev
+		margin-left: 100px
+		transform: rotate(45deg)
+	.owl-carousel .owl-nav .owl-next
+		margin-right: 100px
+		transform: rotate(-135deg)
+
+	.owl-theme .owl-dots .owl-dot.active span,
+	.owl-theme .owl-dots .owl-dot:hover span
+			background-color: $orange

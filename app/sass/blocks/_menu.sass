@@ -1,0 +1,32 @@
+.dropdown-menu
+	display: none
+	position: absolute
+	top: 100%
+	right: 0
+	left: 0
+	padding-top: $dfz * 4
+	background-color: $pinkLight
+	&__left
+		&-list
+			list-style: none
+			font-size: 0
+			&-item
+				padding:
+					right: 2em
+				margin-bottom: $dfz * 3
+				display: inline-block
+				width: 25%
+				box-sizing: border-box
+				font-size: initial
+				&:nth-child(4)
+					padding-right: 0
+				&-icon
+					margin-bottom: $dfz
+					height: 40px
+					img
+						height: 100%
+				&-title
+					text-transform: uppercase
+					font-family: $dfontBold
+		&-sublist
+			list-style: none

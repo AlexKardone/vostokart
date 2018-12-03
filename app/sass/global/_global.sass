@@ -1,0 +1,150 @@
+html,
+body
+	margin: 0
+	padding: 0
+	width: 100%
+	height: 100%
+	font-family: $dfont
+	color: $black
+
+p,
+ul,
+li
+	margin: 0
+	padding: 0
+
+a
+	text-decoration: none
+	color: $black
+	@include link-hover
+
+// stycky-footer
+.wrapper
+	display: flex
+	flex-direction: column
+	height: 100%
+
+.page-content
+	flex: 1 0 auto
+
+.page-footer
+  flex: 0 0 auto
+
+
+// page block
+// logo
+.page
+	&__logo
+		height: 100%
+		img
+			display: block
+			width: 100%
+		&--footer
+			margin-bottom: $dfz * 4
+
+.text-center
+	text-align: center
+
+.page-content
+	&__title-wrap
+		position: relative
+		margin-bottom: $vert-margin * 1.2
+		&--without-margin
+			margin-bottom: 0
+	&__title
+		margin-bottom: $vert-margin / 3
+		text-transform: uppercase
+		font-size: $dfz * 2.4
+		// font-family: $fontTitle
+		letter-spacing: 0.05em
+		&::before
+			@include before-icon
+		&--capitalize
+			text-transform: initial
+		&--without-before
+			margin:
+				top: -0.5%
+				bottom: $vert-margin / 8
+			font-size: $dfz * 1.5
+			letter-spacing: 0.097em
+			&::before
+				display: none
+	&__subtitle
+		margin: 0 auto
+		max-width: 800px
+		font-size: $dfz * 1.7
+		font-family: $fontItalic
+
+// phone number
+.phone-number
+	margin: auto 0
+	width: 100%
+	&--footer
+		margin: 0 0 $dfz * 2 0
+	&__text
+		display: inline-block
+		width: 70%
+		a
+			display: inline-block
+			width: 100%
+			font-size: $dfz * 1.2
+			color: $greyDarken
+			text-decoration: none
+			@include link-hover
+	&__icon
+		position: relative
+		top: 5px
+		margin:
+			top: 4px
+			right: 1em
+		display: inline-block
+		width: 24.5px
+		height: 24.5px
+		&:hover
+			svg
+				path
+					stroke: $redLight
+
+// nav for carousels
+.owl-nav
+	display: block
+
+.owl-prev,
+.owl-next,
+	position: absolute
+	top: calc(50% - 29px)
+.owl-prev
+	left: 10px
+.owl-next
+	right: 10px
+.owl-dots
+	position: absolute
+	bottom: 10px
+	width: 100%
+
+// buttons
+.page__button
+	margin-bottom: $vert-margin * 1.5
+	text-align: center
+	&-link
+		position: relative
+		margin: 0 auto
+		text-transform: initial
+		letter-spacing: 0.05em
+		color: $orange
+		font-weight: 500
+		&:hover
+			@include a-hover
+	&-link::before
+		z-index: -1
+		content: ''
+		position: absolute
+		top: -160%
+		left: 11%
+		bottom: -136%
+		right: 11%
+		display: block
+		border: 1px solid $orange
+		border-radius: 2px
+
+

@@ -1,0 +1,111 @@
+.page-footer
+	&__top
+		margin-bottom: $dfz * 2
+		&-left
+			&-text
+				color: $greyDarken
+				font-size: $dfz
+		&-list
+			padding-top: $dfz
+			ul
+				list-style: none
+				li
+					margin-bottom: $dfz
+					a
+						text-transform: uppercase
+						color: $black
+						@include link-hover
+		&-right
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+			width: 100%
+			height: 100%
+			color: $greyDarken
+			&-text
+				display: inline-block
+				width: 70%
+				margin:
+					left: 15%
+			&-email
+				margin-bottom: $dfz * 3
+				&-icon
+					position: relative
+					top: 5px
+					margin:
+						top: 4px
+						right: 1em
+					display: inline-block
+					width: 24.5px
+					height: 24.5px
+					&:hover
+						polygon,
+						polyline,
+						line
+								stroke: $redLight
+				a
+				 font-family: $dfontMadiun
+				 font-size: $dfz * 1.2
+			&-soc
+				ul
+					list-style: none
+					font-size: 0
+					li
+						display: inline-block
+						width: 25%
+						font-size: initial
+						a
+							color: $greyDark
+							@include link-hover
+	&__middle
+		margin-bottom: $blockindent
+		&-left,
+		&-center,
+		&-right
+			height: 100%
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			&-text
+				color: $greyDarken
+				font-size: $dfz
+		&-right
+			&-search-form
+				display: flex
+				justify-content: space-between
+				width: 100%
+				height: 45px
+			&-search-input
+				padding: $dfz / 2 1em
+				width: 59%
+				height: 100%
+				box-sizing: border-box
+				border: 1px solid $grey
+				border-radius: 2px
+			&-search-submit
+				width: 40%
+				height: 100%
+				box-sizing: border-box
+				font-family: $dfont
+				font-size: $dfz
+				background-color: $orange
+				border: 1px solid $redLight
+				border-radius: 2px
+				&::placeholder
+					color: $greyDarken
+				&:hover
+					background-color: $orange * 1.1
+					color: $greyDarken * 1.1
+	&__bottom
+		padding:
+			top: $blockindent
+			bottom: $blockindent
+		background-color: $greyDarken
+		&-text
+			color: $greyLighten
+			span
+				margin-right: 2em
+				a
+					color: $greyLighten
+					@include link-hover
+								

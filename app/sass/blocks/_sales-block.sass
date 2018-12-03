@@ -1,0 +1,30 @@
+.sales-block
+	&__owl-carousel
+		margin-bottom: $vert-margin
+	&__img-wrap
+		position: relative
+		&::before
+			content: '%'
+			position: absolute
+			top: 10px
+			left: 10px
+			width: 50px
+			height: 50px
+			line-height: 50px
+			text-align: center
+			vertical-align: middle
+			border: 1px solid $orange
+			border-radius: 50%
+			background-color: $orange
+		&::after
+			content: ''
+			position: absolute
+			top: 5px
+			left: 5px
+			width: 60px
+			height: 60px
+			vertical-align: middle
+			border: 1px solid $orange
+			border-radius: 50%
+	&__old-price
+		font-size: $dfz / 1.5

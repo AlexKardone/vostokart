@@ -1,0 +1,62 @@
+.category-list
+	margin-bottom: $vert-margin * 0.93
+	border-bottom: 1px solid $grey
+	&__item,
+	&__link
+		width: 100%
+		height: 100%
+		color: $black
+		text-transform: uppercase
+		letter-spacing: 0.08em
+		&:hover
+			@include a-hover
+	&__item
+		&--title-top
+			position: relative
+			span
+				position: absolute
+				top: $vert-margin * 0.9
+				left: 8%
+			span.category-list__title--italic
+				top: 0
+				left: 0
+				font-size: $dfz * 1.9
+				letter-spacing: 0.11em
+				font-family: $fontItalic
+				text-transform: lowercase
+		&--padding-top-small
+			padding-top: $vert-margin
+		&--padding-top-big
+			padding-top: $vert-margin * 1.5
+		&--with-square
+			height: 740px
+			background-color: $grey
+			&::before
+				z-index: -5
+				content: ''
+				position: absolute
+				right: -40%
+				bottom: -25%
+				width: 305px
+				height: 305px
+				background-color: $pinkLighter
+	&__bottom
+		margin-bottom: $vert-margin * 0.75
+	&__img-wrap
+		overflow: hidden
+		margin-bottom: $vert-margin * 0.86
+		&--left
+			height: 350px
+		&--right
+			height: 480px
+		&--bottom-left
+			height: 810px
+		&--bottom-right
+			height: 700px
+		img
+			width: 100%
+			object-fit: cover
+	&__title
+		font-size: $dfz * 1.6
+		letter-spacing: 0.08em
+

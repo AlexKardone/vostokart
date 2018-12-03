@@ -1,0 +1,65 @@
+// sizes
+$dfz: 1rem
+$dlh: 1.4
+
+// indents
+$blockindent: $dfz * 2.5
+$vert-margin: 4rem
+
+// colors
+$white: #fff
+$black: #000000
+$greyLight: #e6e6e6
+$greyLighten: #cccccc
+$grey: #999999
+$greyDark: #666666
+$greyDarken: #333333
+$red: #ff3333
+$redLight: #ff6633
+$redDark: #cc3300
+$orange: #ff9966
+$pinkLight: #fdf9f5
+$pinkLighter: #fff7ef
+$pink: #ffcccc
+
+// fonts
+$dfont: 'Cera Pro Regular'
+$dfontMadiun: 'Cera Pro Medium'
+$dfontBold: 'Cera Pro Bold'
+$fontRare: 'Proxima Nova Regular'
+$fontItalic: 'Alexander'
+$fontTitle: 'Montserat Regular'
+
+// links hover
+@mixin link-hover
+	&:hover
+		color: $redLight
+		transition: 0.2s linear 
+	&:active
+		color: $redDark
+	// &:visited
+	// 	color: $greyDarken
+
+@mixin link-hover-bottom-menu
+	&:hover
+		color: $redLight
+		background-color: $pinkLight
+		transition: 0.3s linear 
+	&:active
+		color: $redDark
+
+// an icon above the title text
+@mixin before-icon
+	content: ''
+	margin: 0 auto $vert-margin/1.9 auto
+	display: block
+	width: 54px
+	height: 54px
+	background: url('../img/icons/pattern.png')
+
+@mixin header-margin
+	margin: auto 0 1em*0.9 10px
+
+@mixin a-hover
+		text-decoration: none
+		color: $orange

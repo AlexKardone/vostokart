@@ -5,8 +5,21 @@
 	top: 100%
 	right: 0
 	left: 0
-	padding-top: $dfz * 4
+	padding:
+		top: $dfz * 4
+		bottom: $dfz * 4
 	background-color: $pinkLight
+	border: 1px solid $greyLight4
+	box-shadow: 0px 19px 35px 0px rgba(102,102,102,0.7)
+	&::after
+		content: ''
+		z-index: 900
+		position: absolute
+		top: 100%
+		width: 100%
+		min-height: 100%
+		background-color: rgba(255,255,255,0.7)
+		box-shadow: 0px 55px 55px 0px rgba(255,255,255,0.7)
 	&__left
 		padding-left: 1em
 		&-list
@@ -18,17 +31,50 @@
 				margin-bottom: $dfz * 3
 				display: inline-block
 				width: 25%
+				vertical-align: top
 				box-sizing: border-box
 				font-size: initial
 				&:nth-child(4)
 					padding-right: 0
+				&:hover
+					svg
+						g
+							*
+								stroke: $red
 				&-icon
 					margin-bottom: $dfz
 					height: 40px
-					img
+					svg
 						height: 100%
 				&-title
 					text-transform: uppercase
 					font-family: $dfontBold
 		&-sublist
 			list-style: none
+	&__right
+		padding:
+			top: $vert-margin * 0.5
+			bottom: $vert-margin / 2
+			left: 3em
+		font-size: initial
+		border:
+			left: 1px solid $grey
+		&:nth-of-type(2)
+			border-top: 1px solid $grey
+		&-title
+			margin-bottom: $vert-margin / 2
+			display: inline-block
+			text-transform: uppercase
+	&__description
+		font-size: 0
+	&__img,
+	&__address
+		display: inline-block
+		width: 49%
+		vertical-align: top
+		font-size: initial
+		p
+			font-size: $dfz * 0.9
+	&__img
+		img
+			width: 90%

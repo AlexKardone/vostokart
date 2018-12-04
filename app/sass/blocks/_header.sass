@@ -1,6 +1,6 @@
 .page-header
-	margin-top: $blockindent
-
+	margin:t
+		top: $blockindent
 	&__top
 		margin-bottom: $blockindent
 	&__left,
@@ -30,10 +30,11 @@
 			border: 1px solid $greyLight
 			border-radius: 20px
 			&::placeholder
-				color: $greyDarken
+				color: $orange2
 			&:focus
 				outline: none
-				border-color: $redLight
+				background-color: $pinkLighter2
+				border-color: $pinkLighter3
 		&-submit
 			position: absolute
 			top: 2px
@@ -46,6 +47,10 @@
 			cursor: pointer
 			&:focus
 				outline: none
+			&:focus>svg
+				color: $orange2
+			svg
+				color: $grey
 
 	&__middle
 		border-bottom: 1px solid $greyLight
@@ -99,11 +104,11 @@
 			justify-content: space-between
 			width: 100%
 			font-size: 0
-			li
+			&-item
 				margin: auto 0
 				display: inline-block
 				font-size: initial
-				a
+				&-link
 					padding: $dfz 1em
 					display: block
 					font-size: $dfz * 1.4

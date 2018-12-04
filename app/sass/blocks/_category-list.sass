@@ -17,6 +17,8 @@
 				position: absolute
 				top: $vert-margin * 0.9
 				left: 8%
+				@media screen and (max-width: 768px)
+					position: static
 			span.category-list__title--italic
 				top: 0
 				left: 0
@@ -30,7 +32,6 @@
 			padding-top: $vert-margin * 1.5
 		&--with-square
 			height: 740px
-			background-color: $grey
 			&::before
 				z-index: -5
 				content: ''
@@ -40,6 +41,8 @@
 				width: 305px
 				height: 305px
 				background-color: $pinkLighter
+				@media screen and (max-width: 992px)
+					display: none
 	&__bottom
 		margin-bottom: $vert-margin * 0.75
 	&__img-wrap
@@ -47,12 +50,20 @@
 		margin-bottom: $vert-margin * 0.86
 		&--left
 			height: 350px
+			@media screen and (max-width: 768px)
+				height: auto
 		&--right
 			height: 480px
+			@media screen and (max-width: 768px)
+				height: auto
 		&--bottom-left
 			height: 810px
+			@media screen and (max-width: 768px)
+				height: auto
 		&--bottom-right
 			height: 700px
+			@media screen and (max-width: 768px)
+				height: auto
 		img
 			width: 100%
 			object-fit: cover

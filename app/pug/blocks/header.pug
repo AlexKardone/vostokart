@@ -19,7 +19,7 @@ header.page-header
 							form.page-header__search-form
 								input(placeholder='Поиск по каталогу').page-header__search-input
 								button.page-header__search-submit(type="submit")
-									img(src='./img/icons/search.png', alt='Искать')
+									i.fas.fa-search.fa-2x
 	.page-header__middle
 		.container
 			.row
@@ -40,6 +40,6 @@ header.page-header
 			ul.page-header__bottom-menu-list
 				- var bottomMenuList = ['Мебель и интерьер', 'Двери и экстерьер', 'Антиквариат и подарки', 'Коллекции', 'Свет']
 					each item in bottomMenuList
-						li
-							a(href='#')= item
-		include ./menu.pug
+						li.page-header__bottom-menu-list-item
+							a(href='#').page-header__bottom-menu-list-item-link= item
+							include ./menu.pug

@@ -4,18 +4,137 @@
 			.col-md-8
 				.dropdown-menu__left
 					ul.dropdown-menu__left-list
-						- var dropmenuList = [{icon: "../../img/icons/menu-furniture.svg",name: "Барная мебель"}, {icon: "../../img/icons/menu-table.svg",name: "Столы"}, {icon: "../../img/icons/menu-bracket.svg",name: "Консоли"}, {icon: "../../img/icons/menu-bed.svg",name: "Кровати"}, {icon: "../../img/icons/menu-wardrobes.svg",name: "Шкафы"}, {icon: "../../img/icons/menu-mirror.svg",name: "Зеркала"}, {icon: "../../img/icons/menu-chair.svg",name: "Стулья и табуреты"}, {icon: "../../img/icons/menu-textile.svg",name: "Текстиль"}, {icon: "../../img/icons/menu-pedestal.svg",name: "Тумбы и комоды"}, {icon: "../../img/icons/menu-finding.svg",name: "Фурнитура"}, {icon: "../../img/icons/menu-bench.svg",name: "Скамьи"}]
-						each item in dropmenuList
-							li.dropdown-menu__left-list-item
-								div.dropdown-menu__left-list-item-icon
-									img(src=item.icon)
-								span.dropdown-menu__left-list-item-title
-									a(href="#")= item.name
-								ul.dropdown-menu__left-sublist
-									- var sublist = ['Столы', 'Стулья', 'Стулья']
-									each item in sublist
-										li
-											a(href="#")= item
+						- 
+							var icons = ["../../img/icons/menu-furniture.svg"];
+							var dropmenuList = [{icon: "../../img/icons/menu-furniture.svg",name: "Барная мебель"}, {icon: "../../img/icons/menu-table.svg",name: "Столы"}, {icon: "../../img/icons/menu-bracket.svg",name: "Консоли"}, {icon: "../../img/icons/menu-bed.svg",name: "Кровати"}, {icon: "../../img/icons/menu-wardrobes.svg",name: "Шкафы"}, {icon: "../../img/icons/menu-mirror.svg",name: "Зеркала"}, {icon: "../../img/icons/menu-chair.svg",name: "Стулья и табуреты"}, {icon: "../../img/icons/menu-textile.svg",name: "Текстиль"}, {icon: "../../img/icons/menu-pedestal.svg",name: "Тумбы и комоды"}, {icon: "../../img/icons/menu-finding.svg",name: "Фурнитура"}, {icon: "../../img/icons/menu-bench.svg",name: "Скамьи"}]
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-furniture.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Барная мебель
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-table.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Столы
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-bracket.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Консоли
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-bed.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Кровати
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-wardrobes.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Шкафы
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-mirror.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Зеркала
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-chair.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Стулья и табуреты
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-textile.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Текстиль
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-pedestal.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Тумбы и комоды
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-finding.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Фурнитура
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
+						li.dropdown-menu__left-list-item
+							div.dropdown-menu__left-list-item-icon
+								include ../../img/icons/menu-bench.svg
+							span.dropdown-menu__left-list-item-title
+								a(href="#") Скамьи
+							ul.dropdown-menu__left-sublist
+								- var sublist = ['Столы', 'Стулья', 'Стулья']
+								each item in sublist
+									li
+										a(href="#")= item
 
 			.col-md-4
-				| sda
+				- for (var i = 0; i < 2; i++)
+					.dropdown-menu__right
+						strong.dropdown-menu__right-title Где купить
+						.dropdown-menu__description
+							.dropdown-menu__img
+								img(src="../img/collections/menu-" + +(i + 1) +".jpg" alt="")
+							.dropdown-menu__address
+								strong Галерея Интерьеры Махараджей
+								p
+									| ARTPLAY Москва, Нижняя Сыромятническая, д. 10, стр. 2
+									br
+									| Режим работы:
+									br
+									| ежедневно: 11:00-20:00
+									br
+									| телефон:
+									br
+									| +7 (903) 103-53-09
+.b__dropdown-menu

@@ -13,7 +13,7 @@ header.page-header
 					.page-header__center
 						.page__logo
 							img(src='./img/logo.png', alt='Интерьеры Махараджей')
-				.col-md-3
+				.col-md-3.page-header__top-right-col
 					.page-header__right
 						.page-header__search
 							form.page-header__search-form
@@ -22,6 +22,30 @@ header.page-header
 									i.fas.fa-search.fa-2x
 	.page-header__middle
 		.container
+			.row.page-header__middle-mobile-menu-wrap
+				.col
+					.phone-number.phone-number--mob
+						.phone-number__icon.phone-number__icon--mob
+							a(href='tel:+79031035309')
+								include ../../img/icons/phone.svg
+				.col
+					.page-header__search.page-header__search--mob
+						.page-header__search--mob-btn
+							i.fas.fa-search.fa-2x
+				.col
+					.page-header__cart.page-header__cart--mob
+						a(href='#', title='Перейти в корзину').page-header__cart-icon
+							img(src='./img/icons/cart.png', alt='Корзина')
+						.page-header__cart-badge 2
+				.col
+					.page-header__mobile-menu
+						button.page-header__mobile-menu-btn Меню
+			.row
+				.col
+					form.page-header__search-form.page-header__search-form--mob
+						input(placeholder='Поиск по каталогу').page-header__search-input.page-header__search-input--mob
+						button(type="submit").page-header__search-submit.page-header__search-submit--mob
+							i.fas.fa-search.fa-2x
 			.row
 				.col-md-10
 					.page-header__middle-menu
@@ -30,13 +54,16 @@ header.page-header
 							each item in middleMenuList
 								li
 									a(href='#')= item
-				.col-md-2
+				.col-md-2.page-header__middle-right-col
 					.page-header__cart
 						a(href='#', title='Перейти в корзину').page-header__cart-icon
 								img(src='./img/icons/cart.png', alt='Корзина')
 						.page-header__cart-badge 2
 	.page-header__bottom
 		.container
+			.page-header__bottom--mob
+				span.page-header__bottom--mob-text Каталог
+				i.fas.fa-chevron-down
 			ul.page-header__bottom-menu-list
 				- var bottomMenuList = ['Мебель и интерьер', 'Двери и экстерьер', 'Антиквариат и подарки', 'Коллекции', 'Свет']
 					each item in bottomMenuList

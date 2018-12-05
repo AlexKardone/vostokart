@@ -1,8 +1,17 @@
 .page-header
-	margin:t
+	margin:
 		top: $blockindent
+	@media screen and (max-width: 768px)
+		margin-top: 0
 	&__top
 		margin-bottom: $blockindent
+		@media screen and (max-width: 768px)
+			margin-bottom: $blockindent / 2
+			padding-bottom: $blockindent / 6
+			border: 1px solid $greyLight
+		&-right-col
+			@media screen and (max-width: 768px)
+				display: none
 	&__left,
 	&__center,
 	&__right
@@ -21,6 +30,14 @@
 		&-form
 			position: relative
 			height: $dfz * 2.5
+			&--mob
+				display: none
+		&--mob
+			&-btn
+				display: flex
+				justify-content: center
+				svg
+					color: $grey
 		&-input
 			padding:
 				right: 4em
@@ -35,6 +52,13 @@
 				outline: none
 				background-color: $pinkLighter2
 				border-color: $pinkLighter3
+			&--mob
+				&::placeholder
+					font-size: 0
+				&:focus
+					outline: none
+					background-color: $pinkLighter2
+					border-color: $pinkLighter3
 		&-submit
 			position: absolute
 			top: 2px
@@ -51,18 +75,31 @@
 				color: $orange2
 			svg
 				color: $grey
+			&--mob
+				
 
 	&__middle
 		border-bottom: 1px solid $greyLight
+		&-mobile-menu-wrap
+			display: none
+			padding-bottom: $blockindent / 6
+			@media screen and (max-width: 768px)
+				display: flex
 		&-menu-list
 			display: flex
 			justify-content: space-between
 			width: 100%
 			font-size: 0
+			@media screen and (max-width: 768px)
+				flex-direction: column
+				display: none
 			li
 				margin: auto 0
 				display: inline-block
 				font-size: initial
+				@media screen and (max-width: 768px)
+					display: block
+					list-style: none
 				a
 					padding: $dfz 1em
 					display: block
@@ -73,7 +110,37 @@
 					color: $black
 					transition: 0.2s ease-in-out
 					@include link-hover
-
+		&-right-col
+			@media screen and (max-width: 768px)
+				display: none
+	&__mobile-menu
+		&-btn
+			position: relative
+			min-width: 40px
+			min-height: 22px
+			font-size: 0
+			border: none
+			border:
+				top: 2px solid $grey
+			background: none
+			&::before
+				content: ''
+				position: absolute
+				top: 40%
+				right: 0
+				left: 20%
+				display: block
+				border:
+					top: 2px solid $grey
+			&::after
+				content: ''
+				position: absolute
+				right: 0
+				bottom: 0
+				left: 35%
+				display: block
+				border:
+					top: 2px solid $grey
 	&__cart
 		display: flex
 		justify-content: flex-end
@@ -99,11 +166,22 @@
 	&__bottom
 		position: relative
 		border-bottom: 1px solid $greyLight
+		&--mob
+			padding:
+				top: $blockindent / 3
+				bottom: $blockindent / 3
+			text-align: center
+			&-text
+				position: relative
+				margin-right: 1em
+				text-transform: uppercase
 		&-menu-list
-			display: flex
+			display: none
 			justify-content: space-between
 			width: 100%
 			font-size: 0
+			@media screen and (max-width: 768px)
+				flex-direction: column
 			&-item
 				margin: auto 0
 				display: inline-block

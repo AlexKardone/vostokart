@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+  // mobile top menu open
+  $('.page-header__mobile-menu-btn').on('click', function(){
+    $('.page-header__middle-menu-list').slideToggle(200);
+  });
+
+    // mobile search open
+  $('.page-header__search--mob-btn').on('click', function(){
+    $('.page-header__search-form--mob').slideToggle(200);
+  });
+
+  // open header bottom menu
+  $('.page-header__bottom--mob').on('click', function(){
+    $('.page-header__bottom-menu-list').slideToggle(200);
+  });
+
   // animation of the phone number
   $('.phone-number__icon, .phone-number__text').hover(
     function() { $('.phone-number__icon').addClass('animated tada')},

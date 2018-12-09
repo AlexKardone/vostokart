@@ -1,0 +1,10 @@
+<?
+$PERM["news"]["2"]="D";
+$PERM["news"]["5"]="D";
+$PERM["news"]["3"]="D";
+$PERM["news"]["4"]="D";
+$PERM["news"]["6"]="D";
+$PERM["news"]["7"]="D";
+$PERM["news"]["*"]="D";
+$PERM["/"]["*"]="R";
+?>

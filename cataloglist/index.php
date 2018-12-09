@@ -1,0 +1,41 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("title", "Каталог мебели и предметов интерьера от галереи \"Интерьеры Махараджей\"");
+$APPLICATION->SetPageProperty("description", "Полный каталог нашей мебели и предметов интерьера восточного и колониального стилей от галереи \"Интерьеры Махараджей\"");
+$APPLICATION->SetPageProperty("show_catalog", "YES");
+$APPLICATION->SetDirProperty("show_catalog", "YES");
+$APPLICATION->SetTitle("Мебель из массива - \"Интерьеры Махараджей\"");
+?>
+
+<div class="container">
+	<br>
+	<div class="content-wrap">
+		<h2 class="title">Каталог</h2>
+		<?$APPLICATION->IncludeComponent(
+			"bitrix:catalog.section.list",
+			"catalog_main_catalog",
+			Array(
+				"ADD_SECTIONS_CHAIN" => "Y",
+				"CACHE_GROUPS" => "Y",
+				"CACHE_NOTES" => "",
+				"CACHE_TIME" => "3600",
+				"CACHE_TYPE" => "A",
+				"COMPONENT_TEMPLATE" => "catalog_main_catalog",
+				"COUNT_ELEMENTS" => "Y",
+				"IBLOCK_ID" => "6",
+				"IBLOCK_TYPE" => "1c_catalog",
+				"SECTION_CODE" => "",
+				"SECTION_FIELDS" => array(0=>"UF_SITE_VIEW",1=>"PICTURE",),
+				"SECTION_ID" => "",
+				"SECTION_URL" => "/catalog/#SECTION_CODE#/",
+				"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
+				"SHOW_PARENT_NAME" => "Y",
+				"TOP_DEPTH" => "1",
+				"VIEW_MODE" => "LIST"
+			)
+		);?>
+	</div>
+</div>
+
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

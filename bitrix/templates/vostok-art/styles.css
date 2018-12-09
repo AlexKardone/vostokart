@@ -1,0 +1,17 @@
+.storages_list {
+/*width: 400px;*/
+}
+
+.storages_list .storages_list_checkbox{
+  margin-right: 10px;
+}
+
+.storages_list ul {
+  margin: 0;
+}
+
+.storages_list li {
+  list-style-type:none;
+  float: left;
+  margin-right: 10px;
+}

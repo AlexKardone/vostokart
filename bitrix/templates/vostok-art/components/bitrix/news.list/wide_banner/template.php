@@ -1,0 +1,39 @@
+<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+
+<div class="container">
+	<br>
+	<div class="gallery">
+		<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+		<div class="fotorama" data-autoplay="5000" data-width="100%" data-fit="contain" data-max-height="50%">
+
+
+			<?foreach($arResult["ITEMS"] as $arItem):?>
+				<?
+				$this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+				$this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+				?>
+
+				<?
+				$small = false;
+				if ($arItem['PROPERTIES']['SMALLPIC']['VALUE']):
+					$pic = CFile::GetFileArray($arItem['PROPERTIES']['SMALLPIC']['VALUE']);
+					$small = $pic['SRC'];
+				endif;
+				?>
+				<img id="<?=$this->GetEditAreaId($arItem['ID']);?>" src="<?=$arItem["DETAIL_PICTURE"]["SRC"]?>" alt="<?=$arItem['NAME']?>">
+
+				<? if ($arItem['PROPERTIES']['link']['VALUE']):?>
+
+					<!--a href="<?=$arItem['PROPERTIES']['link']['VALUE']?>" title="<?=$arItem['NAME']?>">
+			<div style="background-image: url(<?=$arItem["DETAIL_PICTURE"]["SRC"]?>)" title="<?=$arItem['NAME']?>"></div>
+		</a-->
+
+				<? else: ?>
+					<!--div style="background-image: url(<?=$arItem["DETAIL_PICTURE"]["SRC"]?>)" title="<?=$arItem['NAME']?>"></div-->
+				<? endif; ?>
+
+			<?endforeach;?>
+		</div>
+	</div>
+</div>

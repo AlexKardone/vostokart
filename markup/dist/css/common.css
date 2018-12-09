@@ -148,6 +148,10 @@ input:focus {
   margin-bottom: 4rem;
 }
 
+.active a {
+  color: #ff6633;
+}
+
 .text-center {
   text-align: center;
 }
@@ -573,7 +577,6 @@ input:focus {
   text-transform: uppercase;
   text-decoration: none;
   font-family: "Cera Pro Bold";
-  color: #000000;
   -webkit-transition: 0.2s ease-in-out;
   -o-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
@@ -1627,6 +1630,23 @@ input:focus {
 
 .cart-popup__window-buttons-right:hover {
   color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .page-header__search {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .page-header__search-form {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1200px) {

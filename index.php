@@ -66,9 +66,7 @@ $APPLICATION->SetTitle("Мебель из массива дерева. Свет�
 		"SORT_ORDER2" => "DESC"
 	)
 );?>
-<div class="container">
-        <div class="content-wrap">
-            <h2 class="title">Каталог</h2>
+
 			<?$APPLICATION->IncludeComponent(
 			"bitrix:catalog.section.list",
 			"catalog_main_catalog",
@@ -91,11 +89,7 @@ $APPLICATION->SetTitle("Мебель из массива дерева. Свет�
 			"VIEW_MODE" => "LINE"
 			)
 			);?>
-        </div>
 
-
-		<div class="content-wrap">
-            <h2 class="title">Распродажа</h2>
 			<? $APPLICATION->IncludeComponent(
 			"bitrix:catalog.section",
 			"grid_new_5elem",
@@ -190,10 +184,10 @@ $APPLICATION->SetTitle("Мебель из массива дерева. Свет�
 			"USE_PRODUCT_QUANTITY" => "N"
 			)
 			);?>
+
+
+	</div>
+	<div class="page-footer">
+		<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
 	</div>
 </div>
-
-
-
-
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

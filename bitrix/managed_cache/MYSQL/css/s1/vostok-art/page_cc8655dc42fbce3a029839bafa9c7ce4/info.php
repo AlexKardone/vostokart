@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/vostok-art/components/bitrix/catalog.section/grid_new_5elem/style.css" => "154436614527084","/bitrix/templates/vostok-art/components/bitrix/catalog.section/grid_new_5elem/themes/blue/style.css" => "15443661454842",), 'CUR_SEL_CNT' => '209', 'CUR_IE_CNT' => '0'); ?>

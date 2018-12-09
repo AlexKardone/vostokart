@@ -1,0 +1,1 @@
+<? $arFilesInfo = array( 'FILES' => array("/bitrix/templates/vostok-art/components/bitrix/search.page/search/style.css" => "1544366145358",), 'CUR_SEL_CNT' => '6', 'CUR_IE_CNT' => '0'); ?>

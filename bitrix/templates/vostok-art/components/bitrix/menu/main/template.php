@@ -3,7 +3,7 @@
 
 
 <?if (!empty($arResult)):?>
-<ul class="menu">
+<ul class="page-header__middle-menu-list">
 	<?
 foreach($arResult as $arItem):
 	if($arParams["MAX_LEVEL"] == 1 && $arItem["DEPTH_LEVEL"] > 1)

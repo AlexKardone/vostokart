@@ -36,6 +36,11 @@
     </div>
 </footer>
 
+<?/*
+----------------------------
+RD temporary comment 09.12.2018
+
+
 <?CJSCore::Init(array("jquery"));?>
     
     
@@ -67,12 +72,12 @@
     <script>
 //  $(document).ready($(document).vostokartapp());
 
-/*
+
   $(document).ready($(document).vostokartapp());
   $(window).on('resize', vostokartapp.lib_methods.throttle(function () {
     $(document).vostokartapp();
   }, 300));
-*/
+
 
     <? // tree menu ?>
     $.fn.animateRotate = function(angleFrom, angleTo, duration, easing, complete) {
@@ -222,5 +227,7 @@ window.LiveTex = {
 </script>
 <!-- {/literal} -->
 <script type=“text/javascript” src=“//downloads.mailchimp.com/js/signup-forms/popup/embed.js” data-dojo-config=“usePlainJson: true, isDebug: false”></script><script type=“text/javascript”>require([“mojo/signup-forms/Loader”], function(L) { L.start({“baseUrl”:“mc.us19.list-manage.com”,“uuid”:“e0600848160cdd6036440828c”,“lid”:“7b610ffffc”}) })</script>
+
+*/?>
 </body>
 </html>

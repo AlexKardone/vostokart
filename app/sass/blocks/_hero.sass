@@ -9,15 +9,27 @@
 		display: inline-block
 		max-width: 480px
 		color: $white
+		@media screen and (max-width: 768px)
+			right: 15px
+			left: 15px
+			text-align: center
 	&__title
 		margin: 0
 		margin-bottom: -15px
 		text-transform: uppercase
 		font-size: $dfz * 4.5
 		letter-spacing: 0.08em
+		@media screen and (max-width: 768px)
+			font-size: $dfz * 3
+			margin-bottom: $blockindent * 0.8
+		@media screen and (max-width: 576px)
+			font-size: $dfz * 2
 	&__subtitle
 		margin-bottom: $vert-margin / 3
 		font-size: $dfz * 2.9
+		@media screen and (max-width: 768px)
+			margin-bottom: $blockindent * 0.8
+			font-size: $dfz * 2
 	&__text
 		margin-bottom: $vert-margin / 1.4
 		font-size: $dfz * 2
@@ -26,6 +38,7 @@
 			display: none
 	&__btn
 		padding: 0.6rem 2.7em
+		min-width: 165px
 		color: $white
 		background-color: transparent
 		border: 1px solid $white
@@ -51,7 +64,7 @@
 			height: 50px
 			border-left: 1px solid white
 			border-bottom: 1px solid white
-		@media screen and (max-width: 768px)
+		@media screen and (max-width: 992px)
 					display: none
 	.owl-carousel .owl-nav .owl-prev
 		margin-left: 100px
@@ -59,7 +72,3 @@
 	.owl-carousel .owl-nav .owl-next
 		margin-right: 100px
 		transform: rotate(-135deg)
-
-	.owl-theme .owl-dots .owl-dot.active span,
-	.owl-theme .owl-dots .owl-dot:hover span
-			background-color: $orange

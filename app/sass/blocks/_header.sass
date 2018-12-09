@@ -27,16 +27,31 @@
 	&__search
 		margin: auto
 		width: 100%
+		height: 100%
+		@media screen and (max-width: 992px)
+			margin:
+				top: $blockindent / 3
+		@media screen and (max-width: 768px)
+			margin:
+				top: 0
 		&-form
 			position: relative
 			height: $dfz * 2.5
 			&--mob
+				margin:
+					top: $blockindent / 3
+					bottom: $blockindent / 3
 				display: none
 		&--mob
 			&-btn
 				display: flex
 				justify-content: center
-				svg
+				align-items: center
+				height: 100%
+				cursor: pointer
+				svg.svg-inline--fa.fa-w-16
+					width: 25px
+					height: 25px
 					color: $grey
 		&-input
 			padding:
@@ -47,12 +62,13 @@
 			border: 1px solid $greyLight
 			border-radius: 20px
 			&::placeholder
-				color: $orange2
+				color: $greyDarken
 			&:focus
 				outline: none
 				background-color: $pinkLighter2
 				border-color: $pinkLighter3
 			&--mob
+				padding-right: 6em
 				&::placeholder
 					font-size: 0
 				&:focus
@@ -76,7 +92,10 @@
 			svg
 				color: $grey
 			&--mob
-				
+				top: 0
+				padding-right: 0.7em
+				font-size: $dfz
+				color: $greyDark
 
 	&__middle
 		border-bottom: 1px solid $greyLight
@@ -88,13 +107,13 @@
 		&-menu-list
 			display: flex
 			justify-content: space-between
+			align-items: flex-start
 			width: 100%
 			font-size: 0
 			@media screen and (max-width: 768px)
 				flex-direction: column
 				display: none
 			li
-				margin: auto 0
 				display: inline-block
 				font-size: initial
 				@media screen and (max-width: 768px)
@@ -110,42 +129,66 @@
 					color: $black
 					transition: 0.2s ease-in-out
 					@include link-hover
+					@media screen and (max-width: 1200px)
+						font-size: $dfz * 0.8
+					@media screen and (max-width: 768px)
+						font-size: $dfz * 1.2
 		&-right-col
 			@media screen and (max-width: 768px)
 				display: none
 	&__mobile-menu
 		&-btn
 			position: relative
-			min-width: 40px
-			min-height: 22px
-			font-size: 0
-			border: none
-			border:
-				top: 2px solid $grey
-			background: none
-			&::before
-				content: ''
-				position: absolute
-				top: 40%
-				right: 0
-				left: 20%
-				display: block
-				border:
-					top: 2px solid $grey
-			&::after
-				content: ''
-				position: absolute
-				right: 0
-				bottom: 0
-				left: 35%
-				display: block
-				border:
-					top: 2px solid $grey
+			.nav-icon1
+				width: 40px
+				height: 40px
+				position: relative
+				margin: 0 auto
+				transform: rotate(0deg)
+				transition: .5s ease-in-out
+				cursor: pointer
+				span
+					display: block
+					position: absolute
+					height: 2px
+					width: 100%
+					background: $grey
+					border-radius: 9px
+					opacity: 1
+					left: 0
+					transform: rotate(0deg)
+					transition: .25s ease-in-out
+					&:nth-child(1)
+						top: 10px
+					&:nth-child(2)
+						top: 20px
+						left: 10px
+						width: 30px
+					&:nth-child(3)
+						top: 30px
+						left: 15px
+						width: 25px
+				&.open
+					box-shadow: 0 0 30px 0 $greyLighten
+				&.open span:nth-child(1)
+						top: 18px
+						left: 0
+						transform: rotate(135deg)
+				&.open span:nth-child(2)
+						opacity: 0
+						left: -60px
+				&.open span:nth-child(3)
+						top: 18px
+						left: 0
+						width: 40px
+						transform: rotate(-135deg)
 	&__cart
 		display: flex
 		justify-content: flex-end
 		align-items: center
 		height: 100%
+		&--mob
+			justify-content: center
 		&-icon
 			margin-right: 0.3em
 			display: inline-block
@@ -167,25 +210,37 @@
 		position: relative
 		border-bottom: 1px solid $greyLight
 		&--mob
+			display: none
 			padding:
 				top: $blockindent / 3
 				bottom: $blockindent / 3
 			text-align: center
+			cursor: pointer
+			@media screen and (max-width: 992px)
+				display: block
 			&-text
 				position: relative
 				margin-right: 1em
 				text-transform: uppercase
+			svg
+				transition: .25s ease-in-out
+			&.open svg
+				transform: rotate(-180deg)
 		&-menu-list
-			display: none
+			display: flex
 			justify-content: space-between
 			width: 100%
 			font-size: 0
-			@media screen and (max-width: 768px)
-				flex-direction: column
+			@media screen and (max-width: 992px)
+				display: none
 			&-item
 				margin: auto 0
 				display: inline-block
+				list-style: none
 				font-size: initial
+				@media screen and (max-width: 992px)
+					position: relative
+					display: block
 				&-link
 					padding: $dfz 1em
 					display: block

@@ -12,7 +12,7 @@
 							| Фотографии, материалы и статьи 
 							| являются собственностью галереи
 							| «Интерьеры Махараджей»
-			.col-md-2.offset-md-1
+			.col-md-2.offset-xl-1
 				.page-footer__top-list
 					ul
 						- var footerListOne = ['Каталог', 'Доставка', 'О галерее', 'Контакты']
@@ -26,14 +26,14 @@
 						each item in footerListOne
 							li
 								a(href="#")= item
-			.col-md-3
+			.col-xl-3.col-md-4
 				.page-footer__top-right
 					.phone-number.phone-number--footer
 							.phone-number__icon
 								include ../../img/icons/phone.svg
 							span.phone-number__text.phone-number__text
 								a(href='tel:+79031035309') 7 903 103-53-09
-					.page-footer__top-right-text.
+					.page-footer__top-right-text
 						span По всем вопросам пишите нам на
 					.page-footer__top-right-email
 						.page-footer__top-right-email-icon
@@ -85,6 +85,4 @@
 		.page-footer__bottom-text
 			span Аутсорсинг маркетинга от 
 				a(href="https://rdsales.ru/") R&amp;D
-			span Дизайн сайта: 
-				a(href="mailto:smila-design@yandex.ru") smila-design@yandex.ru
 

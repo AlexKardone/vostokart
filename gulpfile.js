@@ -50,7 +50,8 @@ gulp.task('scripts', function(done) {
         gulp.src([
             './app/libs/jquery/dist/jquery.js',
             './app/libs/animate/animate-css.js',
-            './app/libs/OwlCarousel2-2.3.4/dist/owl.carousel.js'
+            './app/libs/OwlCarousel2-2.3.4/dist/owl.carousel.js',
+            './app/libs/magnific-popup/dist/jquery.magnific-popup.js'
             ]),
         concat('libs.min.js'),
         uglify(),

@@ -364,36 +364,4 @@ jQuery.extend( {
 	guid: 1,
 
 	// jQuery.support is not used in Core but other projects attach their
-	// properties to it so it needs to exist.
-	support: support
-} );
-
-if ( typeof Symbol === "function" ) {
-	jQuery.fn[ Symbol.iterator ] = arr[ Symbol.iterator ];
-}
-
-// Populate the class2type map
-jQuery.each( "Boolean Number String Function Array Date RegExp Object Error Symbol".split( " " ),
-function( i, name ) {
-	class2type[ "[object " + name + "]" ] = name.toLowerCase();
-} );
-
-function isArrayLike( obj ) {
-
-	// Support: real iOS 8.2 only (not reproducible in simulator)
-	// `in` check used to prevent JIT error (gh-2145)
-	// hasOwn isn't used here due to false negatives
-	// regarding Nodelist length in IE
-	var length = !!obj && "length" in obj && obj.length,
-		type = toType( obj );
-
-	if ( isFunction( obj ) || isWindow( obj ) ) {
-		return false;
-	}
-
-	return type === "array" || length === 0 ||
-		typeof length === "number" && length > 0 && ( length - 1 ) in obj;
-}
-
-return jQuery;
-} );
+	// properties to irgin-bottom:.25em}.about-wrap .wp-badge{position:relative;margin-bottom:1.5em;width:100%}.about-wrap .three-col .col,.about-wrap .two-col .col{min-width:100%!important}.about-wrap .under-the-hood.one-col .col,.about-wrap .under-the-hood.three-col .col,.about-wrap .under-the-hood.two-col .col{margin-bottom:2em;padding-bottom:0}.about-wrap .under-the-hood:nth-of-type(2n),.about-wrap .under-the-hood:nth-of-type(3n){margin-top:0}.about-wrap .under-the-hood:nth-of-type(2n) h3,.about-wrap .under-the-hood:nth-of-type(3n) h3{margin-top:0}.about-wrap .floating-header-section{margin-bottom:60px;grid-gap:30px 0}.about-wrap .inline-svg.full-width{margin-bottom:60px}.about-wrap .floating-header-section h2{word-break:break-all;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.about-wrap .floating-header-section .section-content .section-item{max-width:100%;margin:0 0 60px}};

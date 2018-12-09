@@ -1,8 +1,13 @@
 $(document).ready(function() {
 
+  // mobile icon hamburger
+  // $('#nav-icon1').click(function(){
+  //   $(this).toggleClass('open');
+  // });
   // mobile top menu open
   $('.page-header__mobile-menu-btn').on('click', function(){
     $('.page-header__middle-menu-list').slideToggle(200);
+    $('#nav-icon1').toggleClass('open');
   });
 
     // mobile search open
@@ -12,7 +17,24 @@ $(document).ready(function() {
 
   // open header bottom menu
   $('.page-header__bottom--mob').on('click', function(){
+    $('.page-header__bottom--mob').toggleClass('open');
     $('.page-header__bottom-menu-list').slideToggle(200);
+  });
+
+  // hide dropdown second level menu after click beyond its area
+  $(document).click(function (e){ // событие клика по веб-документу
+    var div = $(".dropdown-menu"); // тут указываем ID элемента
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+      div.hide(); // скрываем его
+    }
+  });
+
+  $('html').on('touchstart', function(e) {
+    $('.dropdown-menu').hide();
+  })
+  $(".dropdown-menu").on('touchstart',function(e) {
+      e.stopPropagation();
   });
 
   // animation of the phone number
@@ -39,14 +61,8 @@ $(document).ready(function() {
     function() { $('.page__button-link').removeClass('animated pulse')}
   );
 
-  // animation of the carousel arrows
-  // $('.owl-nav, .owl-next').hover(
-  //   function() { $(this).addClass('animated pulse')},
-  //   function() { $(this).removeClass('animated pulse')}
-  // );
 
-
-
+  // page-header dropdown menu
   $('.page-header__navbar--bottom a').on('click', function(e){
     e.preventDefault();
   });
@@ -61,7 +77,7 @@ $(document).ready(function() {
   });
  
 
-
+  // hero
   $("#carouselHero").owlCarousel({
   	items: 1,
   	nav: true,
@@ -69,6 +85,8 @@ $(document).ready(function() {
   	loop: true
   });
 
+
+  // ales-bloc slider
   $("#carouselList").owlCarousel({
   	items: 4,
     responsive:{
@@ -84,11 +102,25 @@ $(document).ready(function() {
     },
   	margin: 10,
   	nav: true,
-  	// navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
   	dots: false,
   	loop: true
   });
 
+  // click to cart (sales-block)
+  // magnific-popup
+  $(function () {
+    $('.popup-modal').magnificPopup({
+      type: 'inline',
+      alignTop: true,
+      preloader: 200,
+      focus: '#username',
+      modal: true
+    });
+    $(document).on('click', '.cart-popup__window-top-close-btn, .cart-popup__window-buttons-left', function (e) {
+      e.preventDefault();
+      $.magnificPopup.close();
+    });
+  });
 
 // end	
 });

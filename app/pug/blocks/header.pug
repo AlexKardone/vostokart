@@ -2,18 +2,18 @@ header.page-header
 	.page-header__top
 		.container
 			.row
-				.col-md-3
+				.col-xl-3.col-lg-4.col-md-6
 					.page-header__left
 						.phone-number
 							.phone-number__icon
 								include ../../img/icons/phone.svg
 							span.phone-number__text
 								a(href='tel:+79031035309') 7 903 103-53-09
-				.col-md-6
+				.col-xl-6.col-lg-5.col-md-6
 					.page-header__center
 						.page__logo
 							img(src='./img/logo.png', alt='Интерьеры Махараджей')
-				.col-md-3.page-header__top-right-col
+				.col-xl-3.col-lg-3.col-md-12.page-header__top-right-col
 					.page-header__right
 						.page-header__search
 							form.page-header__search-form
@@ -31,7 +31,7 @@ header.page-header
 				.col
 					.page-header__search.page-header__search--mob
 						.page-header__search--mob-btn
-							i.fas.fa-search.fa-2x
+							i.fas.fa-search
 				.col
 					.page-header__cart.page-header__cart--mob
 						a(href='#', title='Перейти в корзину').page-header__cart-icon
@@ -39,13 +39,17 @@ header.page-header
 						.page-header__cart-badge 2
 				.col
 					.page-header__mobile-menu
-						button.page-header__mobile-menu-btn Меню
+						.page-header__mobile-menu-btn
+							#nav-icon1.nav-icon1
+								span
+								span
+								span
 			.row
 				.col
 					form.page-header__search-form.page-header__search-form--mob
 						input(placeholder='Поиск по каталогу').page-header__search-input.page-header__search-input--mob
 						button(type="submit").page-header__search-submit.page-header__search-submit--mob
-							i.fas.fa-search.fa-2x
+							| Искать
 			.row
 				.col-md-10
 					.page-header__middle-menu

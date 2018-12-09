@@ -36,7 +36,7 @@
 	&__button
 		margin: 2px 4px
 		a 
-			text-align: left
+			text-align: center
 			&::before
 				position: absolute
 				top: -1px
@@ -47,6 +47,9 @@
 				content: ''
 				background: url('../img/icons/cart2.png') center no-repeat
 				border: 1px solid $pink
+			@media screen and (max-width: 768px)
+				margin-left: 6px
+				width: 70%
 	.owl-carousel .owl-nav .owl-next,
 	.owl-carousel .owl-nav .owl-prev
 		font-size: 0
